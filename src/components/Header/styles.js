@@ -4,7 +4,7 @@ export const Container = styled.div`
   @import url('https://fonts.googleapis.com/css?family=Roboto&display=swap');
 
   height: 319px;
-  background: #707070 no-repeat padding-box;
+  background: #707070;
   border: 1px solid #707070;
   display: block;
   height: 319px;
@@ -21,18 +21,16 @@ export const Container = styled.div`
   h1 {
     width: 358;
     text-align: center;
-    font-family: 'Helvetica Neue';
+    font-family: 'Helvetica Neue', sans-serif;
     font-size: 48px;
     height: 48px;
     color: #ffffff;
     font-weight: bold;
-    font-family: sans-serif;
   }
   h3 {
     color: #fff;
     text-align: center;
-    font-family: 'Helvetica Neue';
-    font-family: sans-serif;
+    font-family: 'Helvetica Neue', sans-serif;
     font-weight: initial;
     height: 16px;
     margin-top: 24px;
@@ -50,11 +48,14 @@ export const Button = styled.button`
   width: 160px;
   height: 40px;
   margin: 0 20px;
-  background: #ffffff no-repeat padding-box;
+  background: #ffffff;
   box-shadow: 0px 1px 6px #00000029;
   border: 1px solid #707070;
   border-radius: 4px;
   text-align: center;
   color: #888888;
   opacity: 1;
+  &:hover {
+    opacity: 0.9;
+  }
 `;
