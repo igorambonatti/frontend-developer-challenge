@@ -5,6 +5,7 @@ export const Container = styled.div`
   display: block;
   justify-content: center;
   text-align: center;
+
   h3 {
     font-family: 'Helvetica Neue', sans-serif;
     font-size: 18px;
@@ -41,11 +42,17 @@ export const FormContent = styled.div`
   div {
     margin: 0 20px;
     input {
+      @media (max-width: 736px) {
+        width: 240px;
+      }
+      @media (max-width: 556px) {
+        width: 220px;
+      }
       background: #fff;
       height: 30px;
       width: 340px;
       border: 1px solid #707070;
-      font-size: 14px;
+      font-size: 14git px;
       color: #707070;
     }
     span {

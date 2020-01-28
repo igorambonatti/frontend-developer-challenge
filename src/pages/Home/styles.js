@@ -16,16 +16,25 @@ export const ProductsList = styled.div`
   width: 931px;
   display: grid;
   grid-template-columns: repeat(4, 1fr);
-  grid-gap: 40px;
   list-style: none;
+  @media (max-width: 800px) {
+    grid-template-columns: repeat(3, 1fr);
+    width: 100%;
+    margin-left: 20px;
+  }
+  @media (max-width: 640px) {
+    grid-template-columns: repeat(2, 1fr);
+  }
   li {
     display: flex;
     flex-direction: column;
     border-radius: 4px;
     height: 350px;
     width: 200px;
-    margin: 0 0 39px 0;
+    margin: 0 0 39px;
     img {
+      align-self: center;
+
       border: 1px solid #707070;
       width: 100%;
       height: 150px;

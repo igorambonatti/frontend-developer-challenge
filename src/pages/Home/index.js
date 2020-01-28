@@ -19,6 +19,7 @@ import { formatPrice } from '../../util/format';
 export default function Home() {
   const [products, setProducts] = useState([]);
   const [nextLink, setNextLink] = useState('');
+  const [load, setLoad] = useState(false);
   useEffect(() => {
     async function handleProducts() {
       const response = await api.get(
@@ -32,6 +33,7 @@ export default function Home() {
       }));
       setProducts(data);
       setNextLink(response.data.nextPage);
+      setLoad(true);
     }
     handleProducts();
   }, []);
@@ -52,7 +54,7 @@ export default function Home() {
     <Container>
       <Header />
       <ProductsSection>
-        <h2>Sua seção especial</h2>
+        <h2>Sua seleção especial</h2>
         <ProductsList>
           {products.map(product => (
             <li key={product.id}>
@@ -69,7 +71,7 @@ export default function Home() {
           ))}
         </ProductsList>
         <SeekButton onClick={loadProducts}>
-          Ainda mais produtos aqui!
+          {load ? 'Ainda mais produtos aqui!' : 'Carregando...'}
         </SeekButton>
       </ProductsSection>
       <Newsletter />
