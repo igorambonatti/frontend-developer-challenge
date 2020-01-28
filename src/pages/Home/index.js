@@ -35,6 +35,7 @@ export default function Home() {
     }
     handleProducts();
   }, []);
+
   async function loadProducts() {
     const response = await api.get(`https://${nextLink}`);
     const data = response.data.products.map(item => ({
@@ -46,6 +47,7 @@ export default function Home() {
     setProducts([...products, ...data]);
     setNextLink(response.data.nextPage);
   }
+
   return (
     <Container>
       <Header />
