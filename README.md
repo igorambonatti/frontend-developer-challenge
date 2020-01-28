@@ -4,13 +4,13 @@
 
 ### Resumo:
 
-Projeto construido utilizando HTML, CSS E JavaScipt com a biblioteca React e todo seu ecossistema. Busquei me aproximar ao máximo do layout inicial e dar vida com o JavaScript, procurando trazer melhorias como uma melhor responsividade.
+- Projeto construido utilizando HTML, CSS E JavaScipt com a biblioteca React e todo seu ecossistema. Busquei me aproximar ao máximo do layout inicial e dar vida com o JavaScript, procurando trazer melhorias como uma melhor responsividade.
 
 ---
 
 ### Layout:
 
-Layout construido de forma simples, procurando trazer simplicidade e desempenho. Usei o template grid para construção da sessão de produtos, facilitando a adição de produtos na página. Utilizei os styled componentes buscando simplificar o CSS.
+- Layout construido de forma simples, procurando trazer simplicidade e desempenho. Usei o template grid para construção da sessão de produtos, facilitando a adição de produtos na página. Utilizei os styled componentes buscando simplificar o CSS.
 
 ---
 
@@ -52,6 +52,10 @@ Layout construido de forma simples, procurando trazer simplicidade e desempenho.
 - Os botões do header e o da compra estão sem emitir resposta propositalmente.
 
 - Os inputs do newsletter estão fazendo a validação e mandando os dados normalmente para data após dar o Submit.
+
+- Ao inserir os dados corretamente nos inputs da newsletter, e clicar no botão de Submit irá disparar um erro no console referente ao reactotron,
+  tendo em vista que os dados estão chegando normalmente na função que mandaria eles para api, e o reactotron é usado somente em ambiente de desenvolvimento,
+  não há nada inesperado.
 
 ---
 
