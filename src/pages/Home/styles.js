@@ -16,7 +16,7 @@ export const ProductsList = styled.div`
   width: 931px;
   display: grid;
   grid-template-columns: repeat(4, 1fr);
-  grid-gap: 20px;
+  grid-gap: 40px;
   list-style: none;
   li {
     display: flex;
@@ -26,7 +26,7 @@ export const ProductsList = styled.div`
     width: 200px;
     margin: 0 0 39px 0;
     img {
-      border: 1px solid #888888;
+      border: 1px solid #707070;
       width: 100%;
       height: 150px;
     }
@@ -95,4 +95,24 @@ export const SeekButton = styled.button`
   color: #707070;
   margin-top: 16px;
   font-size: 16px;
+`;
+
+export const Footer = styled.div`
+  background: #707070;
+  margin-top: 142.36px;
+  padding-top: 64px;
+  height: 186px;
+  div {
+    height: 50px;
+
+    span {
+      margin: 0 0 3px 0;
+      color: #ffffff;
+      font-family: 'Helvetica Neue', sans-serif;
+      font-weight: initial;
+      font-size: 12px;
+      display: block;
+      text-align: center;
+    }
+  }
 `;

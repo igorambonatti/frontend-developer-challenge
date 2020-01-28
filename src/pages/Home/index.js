@@ -6,11 +6,13 @@ import {
   ProductsList,
   BuyButton,
   SeekButton,
+  Footer,
 } from './styles';
 
 import api from '../../services/api';
 
 import Header from '../../components/Header/index';
+import Newsletter from '../../components/Newsletter/index';
 
 import { formatPrice } from '../../util/format';
 
@@ -55,6 +57,14 @@ export default function Home() {
         </ProductsList>
         <SeekButton>Ainda mais produtos aqui!</SeekButton>
       </ProductsSection>
+      <Newsletter />
+      <Footer>
+        <div>
+          <span>Testando habilidades em HTML, CSS e JS</span>
+          <span>Linx Impulse</span>
+          <span>2020</span>
+        </div>
+      </Footer>
     </Container>
   );
 }
