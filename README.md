@@ -1,63 +1,58 @@
 # Desafio | Frontend Developer
 
-> **Resumo:** Projeto construido com a biblioteca React e todo seu ecossistema, busquei me aproximar ao máximo do layout inicial e dar vida com o JavaScript, procurando trazer melhorias como uma melhor responsividade.
+> **Link da aplicação no Netlify:** https://confident-nobel-0ee512.netlify.com/.
+
+### Resumo:
+
+Projeto construido utilizando HTML, CSS E JavaScipt com a biblioteca React e todo seu ecossistema. Busquei me aproximar ao máximo do layout inicial e dar vida com o JavaScript, procurando trazer melhorias como uma melhor responsividade.
 
 ---
 
-> **Ferramentas:** Usei algumas ferramentas como: Styled Components, axios, eslint.
+### Layout:
 
-### Layout
-
-Você terá que implementar o _layout_ de acordo com esse **[mock](https://xd.adobe.com/spec/aa1c5781-ecac-46c9-7032-b66139998404-dc2d/)**. O _mock_ contém a estrutura do layout e todo o estilo da página.
-
-É importante se ater aos detalhes de tamanho e espaçamento entre os elementos da página, construindo o HTML mais semântico possível utilizando-se das tags do HTML5.
-
-### Comportamento:
-
-Para preencher a página com as informações dos produtos, você terá que consultar esta **[API](https://frontend-intern-challenge-api.iurykrieger.now.sh/products?page=1)** de forma paginada, sendo que cada página consultada retornará as informações de **8 produtos** e um **link para a próxima página**.
-
-Assim que obter os dados, você deverá implementar os seguintes pontos:
-
-- Para cada **produto** retornado pela API, um **card de produto** com as respectivas informações deve ser criado na grade de produtos;
-- Ao clicar no botão **Ainda mais produtos aqui!** a próxima página da API deve ser consultada, gerando mais **8 produtos** na grade existente, abaixo dos produtos já carregados pela primeira requisição;
-- O formulário de _newsletter_ com o título **Compartilhe a novidade** deve ter seus campos de _input_ validados de acordo com o conteúdo (ex: O campo de email deve conter um email válido);
+Layout construido de forma simples, procurando trazer simplicidade e desempenho. Usei o template grid para construção da sessão de produtos, facilitando a adição de produtos na página. Utilizei os styled componentes buscando simplificar o CSS.
 
 ---
 
-## Instruções
+### Funcionamento da página:
 
-- Faça um **[fork](https://help.github.com/en/articles/fork-a-repo)** deste repositório e crie uma branch com o seu nome (ex: `nome-sobrenome`) que irá conter o código do seu desafio;
-- Faça _commits_ ao longo do seu desenvolvimento, isso nos ajudará a entender sua linha de raciocínio ;)
-- Substitua este **README.md** por outro que contenha as informações de _setup_ e a descrição do seu projeto;
-- Suba um _live preview_ do seu desafio em um dos provedores a seguir, isso nos ajudará a testar sua implementação:
-  - **[Now](https://zeit.co/now)**
-  - **[Heroku](https://www.heroku.com)**
-  - **[Netifly](https://www.netlify.com/)**
-  - Qualquer outro semelhante
-- Assim que concluir o seu desafio, abra um **[pull request](https://help.github.com/en/articles/creating-a-pull-request-from-a-fork)** para o [repositório do desafio](https://github.com/iurykrieger/frontend-developer-challenge) com suas alterações e com o link do _live preview_ na descrição;
+Inicialmente a página carrega de forma em que o useEffect tem a função de carregar os itens iniciais da api e setar estados como o próximo link da api. Com a requisição feita, e a lista já armazenada em um estado da aplicação, uso o método .map que faz a leitura do estado e me devolve os itens que são carregados em tela. Após todo carregamento da página, caso o botão **Ainda mais produtos aqui!** seja acionado, ele dispara uma função que faz uma requisição com o link setado com o useEffect, que devolve outra lista e é adicionada juntamente com o estado anterior da lista.
+
+-Foi utlizada a função formatPrice, para no momento da requição a resposta já incluisse no estado, os preços formatados de forma correta, evitando ter que fazer isso no momento da leitura, fazendo assim com que o melhor desempenho fosse garantido.
+
+- Newsletter: Foi utilizada a biblioteca de unform da Rocketseat, buscando facilitar e aprimorar a função, utilizando também yup para validar as informações.
 
 ---
 
-## Dicas
+## Instruções:
 
-> Crie uma estrutura de arquivos organizada para suas implementações
+- Faça o download da aplicação e rode o comando **yarn install** para instalar todas as dependencias do projeto;
+- Após installar todas as dependencias, rode **yarn start** para vizualizar a aplicação na web
 
-> Construa o CSS de forma bem estruturada e em um arquivo separado.
-
-> Evite poluir o escopo global do Javascript
-
-> Documente suas funções e seja o mais conciso possível ao escrever seu código
-
-> Seu README.md deve conter as instruções necessárias para qualquer pessoa fazer seu projeto funcionar
-
-> Your code will be better understood in English ;)
-
-## Não conseguiu fazer tudo?
-
-A sua forma de priorizar a entrega também vai ser considerada. Escreva no README.md o que você conseguiu e não conseguiu implementar, descrevendo porque você preferiu priorizar desta maneira.
+> Garanta que você possui o Node.js e o Yarn devidamente instalado.
 
 ---
 
-Em caso de dúvidas, [abra uma issue](https://github.com/chaordic/frontend-intern-challenge/issues).
+### Ferramentas/Bibliotecas utilizadas:
 
-**Boa sorte =]**
+- Axios
+- Reactotron (utlizado para debug)
+- Yup
+- Unform
+- ReactJs
+- Styled Components
+- Eslint, editorConfig, prettierrc(Buscando padronizar o código)
+
+---
+
+## Considerações sobre o resultado:
+
+- Procurei melhorar a resposividade da página, procurando seguir ao máximo o layout inicial.
+
+- Os botões do header e o da compra estão sem emitir resposta propositalmente.
+
+- Os inputs do newsletter estão fazendo a validação e mandando os dados normalmente para data após dar o Submit.
+
+---
+
+**Obrigado (ツ)**

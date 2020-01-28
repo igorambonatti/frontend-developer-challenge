@@ -13,6 +13,7 @@ export default function Newsletter() {
   });
 
   function handleSubmit(data) {
+    // data possui todos os dados do formulário, pronto para ser enviado
     console.tron.log(data);
   }
   return (

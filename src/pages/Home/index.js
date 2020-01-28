@@ -25,6 +25,7 @@ export default function Home() {
       const response = await api.get(
         'https://frontend-intern-challenge-api.iurykrieger.now.sh/products?page=1'
       );
+
       const data = response.data.products.map(item => ({
         ...item,
         oldFormated: formatPrice(item.oldPrice),
